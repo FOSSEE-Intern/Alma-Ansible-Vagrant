@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn server
+
+[Service]
+WorkingDirectory=/srv/checkout/ansible-nginx-gunicorn/
+Restart=on-failure
+Environment="PATH=/srv/checkout/ansible-nginx-gunicorn/venv/bin"
+ExecStart=/srv/checkout/ansible-nginx-gunicorn/venv/bin/gunicorn \
+    --bind 0.0.0.0:8000 \
+    sysad_intern.wsgi
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+
+[Install]
+WantedBy=multi-user.target
