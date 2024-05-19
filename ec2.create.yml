@@ -19,4 +19,5 @@
         secret_key: "{{ aws_secret_access_key }}"
         image_id: "{{ aws_ami }}"
         state: "running"
-      register: new_ec2_instance
+        tags:
+          Projects: webserver
