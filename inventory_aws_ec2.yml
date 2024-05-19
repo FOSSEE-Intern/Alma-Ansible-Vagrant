@@ -1,11 +1,4 @@
----
-var_files:
-  - awsconfig.yml
-
 plugin: aws_ec2
-
-access_key: "{{ aws_access_key_id }}"
-secret_key: "{{ aws_secret_access_key }}"
 
 regions:
   - us-east-1
