@@ -19,7 +19,7 @@
     - deploy.yml
 - ec2.create.yml: creates an ec2 for the django application to be deployed
 - deploy.yml:
-    - This ensures the dependencies like pythonk, nginx and git are installed or not.
+    - This ensures the dependencies like python, nginx and git are installed or not.
     - Clones the django application repository to the right location.
     - Creates virtual environment and installs the project dependencies in it.
     - Creates `nginx.conf` and systemd service for gunicorn from templates.
