@@ -8,6 +8,7 @@
         source path/to/your/env
         ansible-playbook path/to/your/playbook
         ```
+- Make sure to add `AWS_ACCESSKEY_ID` and `AWS_SECRET_ACCESS_KEY` as environment variables for the ansible inventory to work.
 
 ## In your github repo:
 - Repository settings > Webhooks > Add webhook
